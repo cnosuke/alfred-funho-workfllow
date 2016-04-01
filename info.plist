@@ -23,7 +23,7 @@
 	<key>createdby</key>
 	<string>cnosuke</string>
 	<key>description</key>
-	<string>Records 分報 in seconds</string>
+	<string>Records 分報 in a second.</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
