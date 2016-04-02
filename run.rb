@@ -8,12 +8,13 @@ KINDS = {
 }
 DEFAULT_KIND = :t
 
-args = ARGV.first.split(/\s/)
+arg = ARGV.first.strip
+args = arg.split(/\s+/, 2)
 
-if args.size == 2
+if args.size == 2 && KINDS.keys.include?(args.first.to_sym)
   kind_key, comment = *args
-elsif args.size == 1
-  kind_key, comment = DEFAULT_KIND, args.first
+else
+  kind_key, comment = DEFAULT_KIND, arg
 end
 
 kind = KINDS[kind_key.to_sym]
