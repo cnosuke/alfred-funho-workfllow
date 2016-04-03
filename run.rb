@@ -1,3 +1,4 @@
+require 'terminal-notifier'
 require './lib/funho'
 
 KINDS = {
@@ -20,3 +21,9 @@ end
 kind = KINDS[kind_key.to_sym]
 
 Funho.x(kind: kind, comment: comment)
+
+TerminalNotifier.notify(
+  comment,
+  title: 'Funho',
+  subtitle: kind.to_s,
+)
